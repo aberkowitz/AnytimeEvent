@@ -1,3 +1,34 @@
 Django==1.4
 argparse==1.2.1
 wsgiref==0.1.2
+south
+
+# authorization / authentication
+django-social-auth
+django-meetup-auth
+
+# user profiles, invitations and registration
+django-profiles
+django-invitation
+django-registration
+
+# stripe for credit card payments
+# see this tutorial: http://bryanhelmig.com/20-minutes-with-stripe-and-django/
+-e git+git://github.com/amccloud/django-stripe.git#egg=django-stripe
+#-e git+git://github.com/bryanhelmig/django-stripe-example.git#egg=django-stripe-example
+#-e git+git://github.com/stripe/monospace-django.git#egg=monospace-django
+-e git+git://github.com/GoodCloud/django-zebra.git#egg=django-zebra
+
+# youtube videos and slideshare
+django-videos
+#-e git+git://github.com/fitzgeraldsteele/django_slideshare.git#egg=django-slideshare
+#-e svn+http://pyslideshare.googlecode.com/svn/trunk/#egg=pyslideshare
+
+# get event data from Eventbrite, Meetup.com and Plancast
+eventbrite
+-e git+git://github.com/bartek/plancast-python.git#egg=plancast-python
+#-e git+git://github.com/meetup/python-api-client.git#egg=meetup-python
+
+# development stuff
+django-debug-toolbar
+django-extensions
