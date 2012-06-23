@@ -129,6 +129,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'registration_defaults',
     'registration',
+    'profiles',
     'bootstrapform',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
@@ -138,6 +139,8 @@ INSTALLED_APPS = (
 
 # django-registration
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
+#Login redirects to
+LOGIN_REDIRECT_URL = '/'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
