@@ -5,6 +5,7 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
+    (r'^accounts/', include('registration.backends.default.urls')),
     # Examples:
     # url(r'^$', 'anytimeevent.views.home', name='home'),
     # url(r'^anytimeevent/', include('anytimeevent.foo.urls')),

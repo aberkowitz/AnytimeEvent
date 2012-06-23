@@ -1,4 +1,11 @@
 # Django settings for anytimeevent project.
+import os
+import sys
+
+from registration_defaults.settings import *
+
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps')) # expose apps to `import` statement and to `./manage.py test`
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -85,9 +92,9 @@ SECRET_KEY = 'gp*&amp;8yve@q=wv%m+w2=1f_u3m(ef6+pjsyok1tpd)h8%@z@rol'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+    'django.template.loaders.filesystem.Loader',
+#    'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -106,6 +113,7 @@ ROOT_URLCONF = 'anytimeevent.urls'
 WSGI_APPLICATION = 'anytimeevent.wsgi.application'
 
 TEMPLATE_DIRS = (
+    os.path.join(PROJECT_ROOT, 'templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -118,11 +126,17 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'registration_defaults',
+    'registration',
+    
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+
+# django-registration
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

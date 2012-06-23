@@ -11,6 +11,7 @@ django-meetup-auth
 django-profiles
 django-invitation
 django-registration
+-e git://github.com/yourcelf/django-registration-defaults.git#egg=django-registration-defaults
 
 # stripe for credit card payments
 # see this tutorial: http://bryanhelmig.com/20-minutes-with-stripe-and-django/
