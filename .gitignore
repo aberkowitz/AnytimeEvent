@@ -1,3 +1,13 @@
+# virtualenv directories
+bin
+include
+lib
+src
+.Python
+
+# sqlite database
+anytimeevent.db
+
 *.py[co]
 
 # Packages
