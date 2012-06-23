@@ -73,11 +73,12 @@ STATIC_ROOT = ''
 STATIC_URL = '/static/'
 
 # Additional locations of static files
-STATICFILES_DIRS = (
+STATICFILES_DIRS = [
+    os.path.join(PROJECT_ROOT, "static"),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-)
+]
 
 # List of finder classes that know how to find static files in
 # various locations.
@@ -92,8 +93,8 @@ SECRET_KEY = 'gp*&amp;8yve@q=wv%m+w2=1f_u3m(ef6+pjsyok1tpd)h8%@z@rol'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.app_directories.Loader',
     'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
 #    'django.template.loaders.eggs.Loader',
 )
 
@@ -128,7 +129,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'registration_defaults',
     'registration',
-    
+    'bootstrapform',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
