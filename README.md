@@ -4,11 +4,15 @@ AnytimeEvent
 Getting started
 ---------------
 
+Install pip and virtualenv
+   sudo easy\_install pip
+   sudo pip install virtualenv
+
 Create a Python virtual environment, activate it and install the requirements::
 
     virtualenv .
     . bin/activate
-    pip -r requirements.txt
+    pip install -r requirements.txt
     
 Sync the database, and start up Django::
 
