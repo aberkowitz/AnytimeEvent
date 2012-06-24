@@ -46,4 +46,3 @@ def addvideo(request, number):
        raise Http404
    return render_to_response("addvideo.html",
 							  RequestContext(request))
->>>>>>> 150853758068f06ff1be1f616f358c83afe37344
