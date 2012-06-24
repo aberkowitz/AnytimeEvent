@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 {% block title %}AnytimeEvent{% endblock %}
 {% block content %}
-{{ number }}
+{# number #}
+{% if eventDetails %}
+details Found
+{% else %}
+The video you are looking for cannot be found. To try again, please hang up and redial.<br>
+To go home <a href="{% url home %}">click here</a>
+{% endif %}
 {% endblock %}
