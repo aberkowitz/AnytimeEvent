@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^$', 'anytimeevent.views.home', name='home'),
     url(r'^video/(?P<number>\d{1,})', 'anytimeevent.views.video', name='video'),
+    url(r'^addvideo', 'anytimeevent.views.addvideo', name='addVideo'),
 
     # url(r'^anytimeevent/', include('anytimeevent.foo.urls')),
 
