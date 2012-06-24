@@ -1,0 +1,30 @@
+env:
+  DJANGO_SETTINGS_MODULE: appsembler_settings
+  PYTHONPATH: /app/app:/app/app/anytimeevent:/app/app/anytimeevent/apps
+framework:
+  runtime: python27
+  type: python
+ignores: ["bin", ".git", "build", "include", "lib", ".Python", ".DS_Store"]
+hooks:
+  post-staging:
+  - python manage.py syncdb --noinput
+#  - python manage.py migrate
+  - python manage.py createsuperuser --noinput --username=appsembleradmin --email=admin@appsembler.com
+  - python manage.py changepassword2 appsembleradmin 12345
+#  - python manage.py collectstatic --noinput
+instances: 1
+mem: 64M
+name: anytimeevent
+processes:
+  web: $STACKATO_UWSGI --static-map /static=/app/app/anytimeevent/static
+requirements:
+  pip: []
+  pypm:
+  - mysql-python
+  - django-stackato
+  - psycopg2
+  staging:
+    ubuntu: []
+services:
+  filesystem-anytimeevent: filesystem
+  postgresql-anytimeevent: postgresql
