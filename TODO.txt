@@ -1,3 +1,8 @@
 - hook up user profiles so that users can create and edit their profile
 - given a slideshare URL use pyslideshare or django-slideshare to fetch the slideshare metadata
-- 
+- sync video with slides or other content to go along with the video using PopcornJS: http://maker.mozillapopcorn.org
+- clip youtube videos with SherdJS: https://github.com/ccnmtl/SherdJS
+- sync Youtube video with Slideshare slides using Instant-vcasmo: http://www.vcasmo.com/instant/vcasmo
+= add subtitling with Amara (formerly Unisubs). See PyVideo.org for an example of how it's done. 
+- look at Richard, the code behind PyVideo for inspiration. https://github.com/willkg/richard
+- seed with events pulled from Calagator (making our own events site using the Calagator code). Single-signon using BrowserID?
