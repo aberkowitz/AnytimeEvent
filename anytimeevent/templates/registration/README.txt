@@ -1,0 +1,1 @@
+These templates are from https://github.com/cfletcher1856/django-registration-bootstrap/

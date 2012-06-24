@@ -18,3 +18,9 @@ Sync the database, and start up Django::
 
     python manage.py syncdb
     python manage.py runserver_plus
+
+
+Credits
+-------
+
+- CSS3 social media icons thanks to http://nicolasgallagher.com/lab/css3-social-signin-buttons/

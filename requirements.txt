@@ -3,31 +3,36 @@ argparse==1.2.1
 wsgiref==0.1.2
 south
 
+# Twitter Bootstrap
+#djbootstrap
+django-bootstrap-form
+
 # authorization / authentication
 django-social-auth
 django-meetup-auth
 
 # user profiles, invitations and registration
+# tutorial about django-profiles: http://birdhouse.org/blog/2009/06/27/django-profiles/
 django-profiles
 django-invitation
+
+# registration
 django-registration
+# default templates: https://github.com/yourcelf/django-registration-defaults/blob/master/README.rst
+https://github.com/yourcelf/django-registration-defaults/zipball/master
+# Get some templates designed for Twitter Bootstrap: http://github.com/cfletcher1856/django-registration-bootstrap
 
 # stripe for credit card payments
 # see this tutorial: http://bryanhelmig.com/20-minutes-with-stripe-and-django/
 -e git+git://github.com/amccloud/django-stripe.git#egg=django-stripe
-#-e git+git://github.com/bryanhelmig/django-stripe-example.git#egg=django-stripe-example
-#-e git+git://github.com/stripe/monospace-django.git#egg=monospace-django
 -e git+git://github.com/GoodCloud/django-zebra.git#egg=django-zebra
 
 # youtube videos and slideshare
 django-videos
-#-e git+git://github.com/fitzgeraldsteele/django_slideshare.git#egg=django-slideshare
-#-e svn+http://pyslideshare.googlecode.com/svn/trunk/#egg=pyslideshare
 
 # get event data from Eventbrite, Meetup.com and Plancast
 eventbrite
 -e git+git://github.com/bartek/plancast-python.git#egg=plancast-python
-#-e git+git://github.com/meetup/python-api-client.git#egg=meetup-python
 
 # development stuff
 django-debug-toolbar

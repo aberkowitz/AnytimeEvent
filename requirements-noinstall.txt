@@ -1,0 +1,6 @@
+-e git+git://github.com/cfletcher1856/django-registration-bootstrap.git#egg=django-registration-bootstrap
+-e git+git://github.com/bryanhelmig/django-stripe-example.git#egg=django-stripe-example
+-e git+git://github.com/stripe/monospace-django.git#egg=monospace-django
+-e git+git://github.com/fitzgeraldsteele/django_slideshare.git#egg=django-slideshare
+-e svn+http://pyslideshare.googlecode.com/svn/trunk/#egg=pyslideshare
+-e git+git://github.com/meetup/python-api-client.git#egg=meetup-python

@@ -5,12 +5,11 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.core import urlresolvers
 from django.contrib.auth.decorators import login_required
-from anytimeevent.event.models import Event
+from anytimeevent.models import Event 
 
 def home(request):
     return render_to_response("home.html",
                               RequestContext(request))
-
 
 def discover(request):
 	event_list = Event.objects.all()
@@ -30,16 +29,17 @@ def user_events(request, number):
 @login_required
 def video(request, number):
    try:
-       p = User.objects.get(uid=number)
-   except User.DoesNotExist:
-   	   raise Http404
+       event = Event.objects.get(id=number)
+   except Event.DoesNotExist:
+       raise Http404
    return render_to_response("video.html",
+                              {"event": event},
                               RequestContext(request))
 
 @login_required
 def addvideo(request, number):
    try:
-   	   p = User.objects.get(uid=number)
+       p = User.objects.get(uid=number)
    except User.DoesNotExist:
        raise Http404
    if request.method == 'POST':
@@ -49,6 +49,3 @@ def addvideo(request, number):
            cd.save()
    return render_to_response("addvideo.html",
 							  RequestContext(request))
-
-
- 
