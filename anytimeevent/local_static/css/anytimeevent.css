@@ -1,0 +1,23 @@
+.navbar-inner {
+    background: #577CC1;
+}
+
+.navbar .nav > li > a {
+    background-color: transparent;
+    color: white;
+}
+
+.navbar .nav .active > a, 
+.navbar .nav .active > a:hover {
+    background-color: transparent;
+}
+
+.navbar .brand {
+    color: white;
+    background-color: #EE973D;
+}
+
+.hero-unit {
+    background-color: #3F3F3F;
+    color: white;
+}
