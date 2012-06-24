@@ -7,7 +7,7 @@ from django.conf.urls import patterns, include, url
 urlpatterns = patterns('',
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^$', 'anytimeevent.views.home', name='home'),
-    url(r'^video', 'anytimeevent.views.video', name='video'),
+    url(r'^video/(?P<number>\d)', 'anytimeevent.views.video', name='video'),
 
     # url(r'^anytimeevent/', include('anytimeevent.foo.urls')),
 
