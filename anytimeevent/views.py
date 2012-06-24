@@ -9,8 +9,6 @@ from registration.models import RegistrationProfile
 from django.contrib.auth.decorators import login_required
 from anytimeevent.models import Event 
 
-from anytimeevent.models import EventDetails
-
 def home(request):
     return render_to_response("home.html",
                               RequestContext(request))
