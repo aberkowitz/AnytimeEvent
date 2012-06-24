@@ -7,3 +7,8 @@ from django.core import urlresolvers
 def home(request):
     return render_to_response("home.html",
                               RequestContext(request))
+
+def video(request):
+   return render_to_response("video.html",
+                              RequestContext(request))
+ 
