@@ -14,9 +14,15 @@ Create a Python virtual environment, activate it and install the requirements::
     . bin/activate
     pip install -r requirements.txt
     
+Copy the local_settings.py.template -> local_settings.py and add email password::
+
+    cd anytimeevent
+    cp local_settings.py.template local_settings.py
+    
 Sync the database, and start up Django::
 
     python manage.py syncdb
+    python manage.py collectstatic
     python manage.py runserver_plus
 
 
