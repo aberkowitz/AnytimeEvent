@@ -7,7 +7,7 @@ class Event(models.Model):
 	price = models.DecimalField(blank=False, max_digits=3, decimal_places=2)
 	promoCode = models.CharField(max_length=10)
 	pubdate = models.DateTimeField('date published', auto_now=True)
-	localURI = models.URLField(max_length=400)
+	user = models.ForeignKey(User)
 
 class EventDetails(models.Model):
 	event = models.ForeignKey(Event)
