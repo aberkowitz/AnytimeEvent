@@ -42,6 +42,11 @@ def addvideo(request, number):
    	   p = User.objects.get(uid=number)
    except User.DoesNotExist:
        raise Http404
+   if request.method == 'POST':
+       form = EventForm(request.POST)
+       if form.is_valid():
+           cd = form.cleaned_data
+           cd.save()
    return render_to_response("addvideo.html",
 							  RequestContext(request))
 
