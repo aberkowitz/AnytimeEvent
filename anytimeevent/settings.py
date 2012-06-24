@@ -131,6 +131,7 @@ INSTALLED_APPS = (
     'registration',
     'profiles',
     'bootstrapform',
+    'social_auth',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -141,6 +142,27 @@ INSTALLED_APPS = (
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
 #Login redirects to
 LOGIN_REDIRECT_URL = '/'
+
+AUTHENTICATION_BACKENDS = (
+    'social_auth.backends.twitter.TwitterBackend',
+    'social_auth.backends.facebook.FacebookBackend',
+    'social_auth.backends.contrib.linkedin.LinkedinBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+TWITTER_CONSUMER_KEY         = ''
+TWITTER_CONSUMER_SECRET      = ''
+FACEBOOK_APP_ID              = '467495889946279'
+FACEBOOK_API_SECRET          = 'f9bdd76706da046e4d5d311994b3a6d5'
+FACEBOOK_EXTENDED_PERMISSIONS = ['email']
+LINKEDIN_CONSUMER_KEY        = ''
+LINKEDIN_CONSUMER_SECRET     = ''
+    
+SOCIAL_AUTH_CREATE_USERS          = True
+SOCIAL_AUTH_FORCE_RANDOM_USERNAME = False
+SOCIAL_AUTH_DEFAULT_USERNAME      = 'socialauth_user'
+SOCIAL_AUTH_COMPLETE_URL_NAME     = 'socialauth_complete'
+LOGIN_ERROR_URL                   = '/login/error/'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

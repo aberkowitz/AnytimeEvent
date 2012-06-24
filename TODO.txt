@@ -1,1 +1,3 @@
 - hook up user profiles so that users can create and edit their profile
+- given a slideshare URL use pyslideshare or django-slideshare to fetch the slideshare metadata
+- 
