@@ -164,6 +164,12 @@ SOCIAL_AUTH_DEFAULT_USERNAME      = 'socialauth_user'
 SOCIAL_AUTH_COMPLETE_URL_NAME     = 'socialauth_complete'
 LOGIN_ERROR_URL                   = '/login/error/'
 
+EMAIL_HOST_USER = 'no-reply@anytimeevent.com'
+EMAIL_USE_TLS = True 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_PASSWORD = '<changeme>'
+EMAIL_PORT = 587
+ 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
@@ -192,3 +198,8 @@ LOGGING = {
         },
     }
 }
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
