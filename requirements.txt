@@ -12,11 +12,15 @@ django-social-auth
 django-meetup-auth
 
 # user profiles, invitations and registration
+# tutorial about django-profiles: http://birdhouse.org/blog/2009/06/27/django-profiles/
 django-profiles
 django-invitation
+
+# registration
 django-registration
+# default templates: https://github.com/yourcelf/django-registration-defaults/blob/master/README.rst
 https://github.com/yourcelf/django-registration-defaults/zipball/master
-#-e git://github.com/yourcelf/django-registration-defaults.git#egg=django-registration-defaults
+# Get some templates designed for Twitter Bootstrap: http://github.com/cfletcher1856/django-registration-bootstrap
 
 # stripe for credit card payments
 # see this tutorial: http://bryanhelmig.com/20-minutes-with-stripe-and-django/
