@@ -4,6 +4,8 @@ from django.http import Http404
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.core import urlresolvers
+from registration.forms import RegistrationForm
+from registration.models import RegistrationProfile
 from django.contrib.auth.decorators import login_required
 from anytimeevent.models import Event 
 
@@ -31,7 +33,7 @@ def video(request, number):
    try:
        event = Event.objects.get(id=number)
    except Event.DoesNotExist:
-   	   raise Http404
+       raise Http404
    return render_to_response("video.html",
                               {"event": event},
                               RequestContext(request))
@@ -42,5 +44,10 @@ def addvideo(request, number):
        p = User.objects.get(uid=number)
    except User.DoesNotExist:
        raise Http404
+   if request.method == 'POST':
+       form = EventForm(request.POST)
+       if form.is_valid():
+           cd = form.cleaned_data
+           cd.save()
    return render_to_response("addvideo.html",
 							  RequestContext(request))

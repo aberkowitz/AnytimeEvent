@@ -2,8 +2,22 @@
 {% block title %}AnytimeEvent{% endblock %}
 {% block content %}
           <div class="hero-unit">
+<<<<<<< HEAD
+            <h1>Add Event</h1>
+            {% if form.errors %}
+            <p style="color: red;">
+            	Please correct the error{{ form.errors|pluralize }} below.
+            </p>
+            {% endif %}
+            <form action="" method="post">
+            	<table>
+            	    {{form.as_table}}
+            	</table>
+            <input type="submit" value="Submit">
+=======
             <h1>Event Search</h1>
             <p>This is a place holder for the event search for a consumer of content</p>
             <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+>>>>>>> e801433d87605364bec28d05fbadb1b505a0a808
           </div>
 {% endblock %}
