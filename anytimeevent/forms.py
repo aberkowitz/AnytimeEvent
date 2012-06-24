@@ -1,9 +1,10 @@
 from django.forms import ModelForm
+from anytimeevent.models import Event
 
-class EventForm(ModelForm)
+class EventForm(ModelForm):
     class Meta:
     	model = Event
-    	fields = ('slidesURI', 'videoURI', 'externalURI', 'price', 'eventName', 'eventDate', 'eventLocation', 'speakers', 'price', 'promoCode')
+    	fields = ('slidesURI', 'videoURI', 'externalURI', 'eventName', 'eventDate', 'eventLocation', 'speakers', 'price', 'promoCode')
 	#eventURLField = forms.URLField(label='Please enter the web address of your Eventbrite event', max_length=400)
 	#videoURLField = forms.URLField(label='To submit a video, please enter a YouTube URL:', max_length=400)
 	#slidesURLField = forms.URLField(label='To submit a slide presentation, please enter a Slideshare URL:', max_length=400)
