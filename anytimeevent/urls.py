@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     url(r'^accounts/', include('social_auth.urls')),
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^$', 'anytimeevent.views.home', name='home'),
-    url(r'^video/(?P<number>\d)', 'anytimeevent.views.video', name='video'),
+    url(r'^video/(?P<number>\d{1,})', 'anytimeevent.views.video', name='video'),
 
     # url(r'^anytimeevent/', include('anytimeevent.foo.urls')),
 

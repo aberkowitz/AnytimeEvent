@@ -12,5 +12,6 @@ def home(request):
 @login_required
 def video(request, number):
    return render_to_response("video.html",
-                              RequestContext(request))
+                              {'number': number},
+                              context_instance=RequestContext(request))
  
